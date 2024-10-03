@@ -2,6 +2,7 @@ package org.ks.myworkspace.model.cvcreator;
 
 import jakarta.persistence.*;
 import lombok.Getter;
+import org.antlr.v4.runtime.misc.NotNull;
 
 import java.util.List;
 
@@ -17,6 +18,9 @@ public class User {
     private String firstName;
     private String lastName;
     private String email;
+    @NotNull
+    private String username;
+    @NotNull
     private String password;
 
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
@@ -28,6 +32,10 @@ public class User {
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public void setLastName(String lastName) {
