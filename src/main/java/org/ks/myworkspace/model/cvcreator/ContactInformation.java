@@ -1,30 +1,20 @@
 package org.ks.myworkspace.model.cvcreator;
 
-import jakarta.persistence.Embeddable;
+import jakarta.persistence.*;
 import lombok.Getter;
+import lombok.Setter;
 
 @Getter
+@Setter
 @Embeddable
 public class ContactInformation {
 
+    private String fullName;
+    private String gender;
     private String phoneNumber;
+    private String emailAddress;
     private String address;
     private String linkedinProfile;
     private String githubProfile;
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public void setLinkedinProfile(String linkedinProfile) {
-        this.linkedinProfile = linkedinProfile;
-    }
-
-    public void setGithubProfile(String githubProfile) {
-        this.githubProfile = githubProfile;
-    }
+    private String jobTitle;
 }

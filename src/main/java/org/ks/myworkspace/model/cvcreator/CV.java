@@ -15,10 +15,6 @@ public class CV {
 
     private String title;
 
-    @ManyToOne
-    @JoinColumn(name = "user_id")
-    private User user;
-
     @OneToMany(mappedBy = "cv", cascade = CascadeType.ALL)
     private List<Education> education;
 
@@ -43,10 +39,6 @@ public class CV {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     public void setEducation(List<Education> education) {

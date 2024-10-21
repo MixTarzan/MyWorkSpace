@@ -1,0 +1,33 @@
+### Create a new CV
+POST http://localhost:8080/api/cv
+Content-Type: application/json
+
+{
+  "contactInformation": {
+    "fullName": "jhon doe",
+    "gender": "male",
+    "address": "home",
+    "emailAddress": "john.doe@example.com",
+    "phoneNumber": "1234567890"
+  }
+}
+
+### Get all CVs
+GET http://localhost:8080/api/cv
+
+### Get CV by id
+GET http://localhost:8080/api/cv/1
+
+### Update CV
+PUT http://localhost:8080/api/cv/1
+Content-Type: application/json
+
+{
+  "contactInformation": {
+    "emailAddress": "jane.doe@example.com",
+    "phoneNumber": "0987654321"
+  }
+}
+
+### Delete CV
+DELETE http://localhost:8080/api/cv/2
